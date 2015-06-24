@@ -1,0 +1,27 @@
+{
+  "name": "ppkas",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jrajalu/ppkas",
+  "authors": [
+    "Jamaludin Rajalu"
+  ],
+  "description": "Official WordPress CMS Theme for PPKAS UniMAP",
+  "main": "index.php",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "ukm",
+    "ukmtheme",
+    "template",
+    "wordpress"
+  ],
+  "license": "CC BY",
+  "devDependencies": {
+    "uikit": "~2.20.3",
+    "fitvids": "~1.1.0",
+    "TGM-Plugin-Activation": "https://github.com/TGMPA/TGM-Plugin-Activation.git#~2.4.2",
+    "jqnewsTicker": "https://github.com/jayeshmagare/jqnewsTicker.git#~1.0.2",
+    "CMB2": "https://github.com/WebDevStudios/CMB2.git#~2.0.8"
+  }
+}
