@@ -1,7 +1,6 @@
 <?php
 /**
- * @package UKMTheme
- * @subpackage UKM Twenty Fifteen
+ * @package PPKAS_UniMAP
  * @version 1.0
  * @author Jamaludin Rajalu
  */

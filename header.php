@@ -26,20 +26,6 @@
       </div>
       <div class="col-6-12">
         <div class="column">
-          <div class="col-10-12">
-            <?php
-              wp_nav_menu(array(
-                'theme_location'  => 'top',
-                'menu'            => 'Top Navigation',
-                'menu_class'      => 'top-nav',
-              ));
-            ?>
-          </div>
-          <div class="col-2-12 sm-hidden">
-            <?php get_template_part( 'templates/off', 'canvas-search' );?>
-          </div>
-        </div>
-        <div class="column">
           <h1 class="site-name"><?php echo bloginfo( 'name' ); ?></h1>
         </div>
       </div>
@@ -59,7 +45,7 @@
         ?>
       </div>
       <div class="col-1-12 sm-hidden">
-      <?php get_template_part( 'templates/off', 'canvas-tools' );?>
+      <?php get_template_part( 'templates/off', 'canvas-search' );?>
       </div>
     </div>
   </div>

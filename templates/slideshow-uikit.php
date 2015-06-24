@@ -36,35 +36,8 @@
       <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder_slideshow_a.jpg" alt="Slide-1" style="width: 100%;">
       <div class="uk-overlay-panel uk-overlay-bottom uk-overlay-fade">
         <div class="wrap slideshow">
-          <h2>UKM Awesome!</h2>
+          <h2>PPKAS UniMAP Awesome!</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed qui ut placeat quae, nisi ratione sunt, ex consectetur officia saepe.</p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder_slideshow_b.jpg" alt="Slide-2" style="width: 100%;">
-      <div class="uk-overlay-panel uk-overlay-bottom uk-overlay-fade">
-        <div class="wrap slideshow">
-          <h2>Universiti Kebangsaan Malaysia</h2>
-          <p>Libero est vero voluptatum, qui earum distinctio sint corrupti commodi, praesentium eligendi, necessitatibus suscipit hic.</p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder_slideshow_c.jpg" alt="Slide-3" style="width: 100%;">
-      <div class="uk-overlay-panel uk-overlay-bottom uk-overlay-fade">
-        <div class="wrap slideshow">
-          <h2>UKMTheme WordPress Awesome!</h2>
-          <p>Libero est vero voluptatum, qui earum distinctio sint corrupti commodi, praesentium eligendi, necessitatibus suscipit hic. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed qui ut placeat quae, nisi ratione sunt, ex consectetur officia saepe.</p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder_slideshow_d.jpg" width="960" height="350" alt="Slide-1">
-      <div class="uk-overlay-panel uk-overlay-bottom uk-overlay-fade">
-        <div class="wrap slideshow">
-          <h2>UKMTheme WordPress Awesome!</h2>
-          <p>Libero est vero voluptatum, qui earum distinctio sint corrupti commodi, praesentium eligendi, necessitatibus suscipit hic. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed qui ut placeat quae, nisi ratione sunt, ex consectetur officia saepe.</p>
         </div>
       </div>
     </li>

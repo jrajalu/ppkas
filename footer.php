@@ -17,15 +17,14 @@ $counter = get_option( 'ukmtheme_visitor_counter' );
   <div class="footer-copyright">
     <div class="wrap column">
       <div class="col-12-12">
-        <p class="ut-copyright"><?php _e( 'Copyright &copy;&nbsp;', 'ukmtheme' ); ?><?php echo date( 'Y' ); ?>&nbsp;<?php _e( 'The National University of Malaysia', 'ukmtheme' ); ?></p>
-        <?php 
-          wp_nav_menu(
-            array(
-            'theme_location'  => 'footer',
-            'menu'            => 'Footer Navigation',
-            'menu_class'      => 'footer-nav',
-          )); 
-        ?>
+        <p>School Of Environmental Engineering, Universiti Malaysa Perlis, Kompleks Pusat Pengajian Jejawi 3, 02600 Arau, Perlis, MALAYSIA</p>
+        <p>Tel: +60 04 979 8626   Fax: +60 04 979 8636    Email: dean_environmental@unimap.edu.my</p>
+        <p>Best viewed with Mozilla Firefox and Googe Chrome, 1280 x 768 resolution</p>
+      </div>
+    </div>
+    <div class="wrap column">
+      <div class="col-12-12">
+        <p><?php _e( 'Copyright &copy;&nbsp;', 'ukmtheme' ); ?><?php echo date( 'Y' ); ?>&nbsp;<?php _e( 'UniMAP The School of Environmental Engineering. All Rights Reserved.', 'ukmtheme' ); ?></p>
       </div>
     </div>
   </div>

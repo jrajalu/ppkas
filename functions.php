@@ -103,15 +103,13 @@ add_action( 'after_setup_theme', 'ppkas_setup' );
     load_theme_textdomain( 'ukmtheme', get_template_directory() . '/lang' );
 
     register_nav_menus( array(
-      'top'       => __( 'Top Navigation', 'ukmtheme' ),
       'main'      => __( 'Main Navigation', 'ukmtheme' ),
-      'footer'    => __( 'Footer Navigation', 'ukmtheme' ),
     ) );
 
     add_theme_support( 'custom-header', array(
       'width'         => 399.953,
       'height'        => 100,
-      'default-image' => get_template_directory_uri() . '/img/logo.png',
+      'default-image' => get_template_directory_uri() . '/img/logo-unimap.png',
       'uploads'       => true,
       'header-text'   => false,
       )
