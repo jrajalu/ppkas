@@ -73,8 +73,8 @@ add_action( 'wp_enqueue_scripts', 'ppkas_scripts' );
 
 require( 'inc/theme-update-checker.php' );
   new ThemeUpdateChecker(
-    'ukm-twentyfifteen-master',
-    'https://raw.githubusercontent.com/jrajalu/ukm-twentyfifteen/master/version.json'
+    'ppkas-master',
+    'https://raw.githubusercontent.com/jrajalu/ppkas/master/version.json'
 );
 
 /**
@@ -132,6 +132,7 @@ add_action( 'after_setup_theme', 'ppkas_module' );
       require( get_template_directory() . '/inc/post-type-faq.php');
       require( get_template_directory() . '/inc/post-type-gallery.php');
       require( get_template_directory() . '/inc/post-type-news.php');
+      require( get_template_directory() . '/inc/post-type-page.php');
       require( get_template_directory() . '/inc/post-type-publication.php' );
       require( get_template_directory() . '/inc/post-type-staff.php');
       require( get_template_directory() . '/inc/post-type-slideshow.php');
