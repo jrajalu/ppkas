@@ -20,14 +20,14 @@
       if ( $slideshow->have_posts() ) : while ( $slideshow->have_posts() ) : $slideshow->the_post(); 
     ?>
     <li>
-      <a href="<?php echo get_post_meta(get_the_ID(),'ut_slideshow_link',true); ?>">
-        <img src="<?php echo get_post_meta(get_the_ID(),'ut_slideshow_image',true); ?>" alt="<?php the_title(); ?>" style="width: 100%;">
+      <a href="<?php echo get_post_meta(get_the_ID(),'ppkas_slideshow_link',true); ?>">
+        <img src="<?php echo get_post_meta(get_the_ID(),'ppkas_slideshow_image',true); ?>" alt="<?php the_title(); ?>" style="width: 100%;">
       </a>
       <div class="uk-overlay-panel uk-overlay-bottom uk-overlay-fade">
-      <?php $hide_caption = get_post_meta(get_the_ID(), 'ut_slideshow_caption_hide', true); ?>
+      <?php $hide_caption = get_post_meta(get_the_ID(), 'ppkas_slideshow_caption_hide', true); ?>
         <div class="wrap slideshow <?php if ( $hide_caption== on ) { echo 'hidden'; } ?>">
           <h2><?php the_title(); ?></h2>
-          <p><?php echo get_post_meta(get_the_ID(),'ut_slideshow_caption',true); ?></p>
+          <p><?php echo get_post_meta(get_the_ID(),'ppkas_slideshow_caption',true); ?></p>
         </div>
       </div>
     </li>            
