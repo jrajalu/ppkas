@@ -1,13 +1,13 @@
 <?php
 /**
- * @package UKMTheme
+ * @package ppkas
  * @subpackage UKM Twenty Fifteen
  * @version 1.0
  * @author Jamaludin Rajalu
- * 
+ *
  * @link http://codex.wordpress.org/Customizing_the_Login_Form
  */
-function ukmtheme_login_logo() { ?>
+function ppkas_login_logo() { ?>
   <style type="text/css">
   body.login div#login h1 a {
     background-image: none, url("<?php echo get_stylesheet_directory_uri(); ?>/img/logo-login.png");
@@ -38,14 +38,14 @@ function ukmtheme_login_logo() { ?>
   }
   </style>
 <?php }
-add_action( 'login_enqueue_scripts', 'ukmtheme_login_logo' );
+add_action( 'login_enqueue_scripts', 'ppkas_login_logo' );
 
-function ukmtheme_login_logo_url() {
+function ppkas_login_logo_url() {
   return get_bloginfo( 'url' );
 }
-add_filter( 'login_headerurl', 'ukmtheme_login_logo_url' );
+add_filter( 'login_headerurl', 'ppkas_login_logo_url' );
 
-function ukmtheme_login_logo_url_title() {
+function ppkas_login_logo_url_title() {
   return get_bloginfo( 'name' );
 }
-add_filter( 'login_headertitle', 'ukmtheme_login_logo_url_title' );
+add_filter( 'login_headertitle', 'ppkas_login_logo_url_title' );

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package UKMTheme
+ * @package ppkas
  * @subpackage UKM Twenty Fifteen
  * @version 1.0
  * @author Jamaludin Rajalu
@@ -12,19 +12,19 @@
 function ppkas_latest_news() {
 
   $labels = array(
-    'name'                => _x( 'News', 'Post Type General Name', 'ukmtheme' ),
-    'singular_name'       => _x( 'News', 'Post Type Singular Name', 'ukmtheme' ),
-    'menu_name'           => __( 'News', 'ukmtheme' ),
-    'parent_item_colon'   => __( 'Parent News:', 'ukmtheme' ),
-    'all_items'           => __( 'All News', 'ukmtheme' ),
-    'view_item'           => __( 'View News', 'ukmtheme' ),
-    'add_new_item'        => __( 'Add New News', 'ukmtheme' ),
-    'add_new'             => __( 'Add New', 'ukmtheme' ),
-    'edit_item'           => __( 'Edit News', 'ukmtheme' ),
-    'update_item'         => __( 'Update News', 'ukmtheme' ),
-    'search_items'        => __( 'Search News', 'ukmtheme' ),
-    'not_found'           => __( 'Not found', 'ukmtheme' ),
-    'not_found_in_trash'  => __( 'Not found in Trash', 'ukmtheme' ),
+    'name'                => _x( 'News', 'Post Type General Name', 'ppkas' ),
+    'singular_name'       => _x( 'News', 'Post Type Singular Name', 'ppkas' ),
+    'menu_name'           => __( 'News', 'ppkas' ),
+    'parent_item_colon'   => __( 'Parent News:', 'ppkas' ),
+    'all_items'           => __( 'All News', 'ppkas' ),
+    'view_item'           => __( 'View News', 'ppkas' ),
+    'add_new_item'        => __( 'Add New News', 'ppkas' ),
+    'add_new'             => __( 'Add New', 'ppkas' ),
+    'edit_item'           => __( 'Edit News', 'ppkas' ),
+    'update_item'         => __( 'Update News', 'ppkas' ),
+    'search_items'        => __( 'Search News', 'ppkas' ),
+    'not_found'           => __( 'Not found', 'ppkas' ),
+    'not_found_in_trash'  => __( 'Not found in Trash', 'ppkas' ),
   );
   $rewrite = array(
     'slug'                => 'news',
@@ -33,8 +33,8 @@ function ppkas_latest_news() {
     'feeds'               => true,
   );
   $args = array(
-    'label'               => __( 'ukmnews', 'ukmtheme' ),
-    'description'         => __( 'Latest News', 'ukmtheme' ),
+    'label'               => __( 'ukmnews', 'ppkas' ),
+    'description'         => __( 'Latest News', 'ppkas' ),
     'labels'              => $labels,
     'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', ),
     'hierarchical'        => true,
@@ -67,21 +67,21 @@ add_action( 'init', 'ppkas_latest_news', 0 );
 function ppkas_news_category_taxonomy() {
 
   $labels = array(
-    'name'                       => _x( 'News Categories', 'Taxonomy General Name', 'ukmtheme' ),
-    'singular_name'              => _x( 'News Category', 'Taxonomy Singular Name', 'ukmtheme' ),
-    'menu_name'                  => __( 'News Category', 'ukmtheme' ),
-    'all_items'                  => __( 'All Items', 'ukmtheme' ),
-    'parent_item'                => __( 'Parent News Category', 'ukmtheme' ),
-    'parent_item_colon'          => __( 'Parent News Category:', 'ukmtheme' ),
-    'new_item_name'              => __( 'New News Category Name', 'ukmtheme' ),
-    'add_new_item'               => __( 'Add New News Category', 'ukmtheme' ),
-    'edit_item'                  => __( 'Edit News Category', 'ukmtheme' ),
-    'update_item'                => __( 'Update News Category', 'ukmtheme' ),
-    'separate_items_with_commas' => __( 'Separate News Categories with commas', 'ukmtheme' ),
-    'search_items'               => __( 'Search News Categories', 'ukmtheme' ),
-    'add_or_remove_items'        => __( 'Add or remove News Categories', 'ukmtheme' ),
-    'choose_from_most_used'      => __( 'Choose from the most used News Categories', 'ukmtheme' ),
-    'not_found'                  => __( 'Not Found', 'ukmtheme' ),
+    'name'                       => _x( 'News Categories', 'Taxonomy General Name', 'ppkas' ),
+    'singular_name'              => _x( 'News Category', 'Taxonomy Singular Name', 'ppkas' ),
+    'menu_name'                  => __( 'News Category', 'ppkas' ),
+    'all_items'                  => __( 'All Items', 'ppkas' ),
+    'parent_item'                => __( 'Parent News Category', 'ppkas' ),
+    'parent_item_colon'          => __( 'Parent News Category:', 'ppkas' ),
+    'new_item_name'              => __( 'New News Category Name', 'ppkas' ),
+    'add_new_item'               => __( 'Add New News Category', 'ppkas' ),
+    'edit_item'                  => __( 'Edit News Category', 'ppkas' ),
+    'update_item'                => __( 'Update News Category', 'ppkas' ),
+    'separate_items_with_commas' => __( 'Separate News Categories with commas', 'ppkas' ),
+    'search_items'               => __( 'Search News Categories', 'ppkas' ),
+    'add_or_remove_items'        => __( 'Add or remove News Categories', 'ppkas' ),
+    'choose_from_most_used'      => __( 'Choose from the most used News Categories', 'ppkas' ),
+    'not_found'                  => __( 'Not Found', 'ppkas' ),
   );
   $rewrite = array(
     'slug'                       => 'news-category',

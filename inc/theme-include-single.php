@@ -18,7 +18,7 @@ add_filter( 'single_template', 'get_appreciation_post_type_template' );
 
         $single_appreciation_template = get_template_directory() . '/templates/single-appreciation.php';
       }
-      
+
       return $single_appreciation_template;
 
   }

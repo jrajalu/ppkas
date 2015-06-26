@@ -86,20 +86,20 @@ require( 'inc/theme-update-checker.php' );
 
 add_action( 'after_setup_theme', 'ppkas_setup' );
   function ppkas_setup() {
-    
+
     add_theme_support( 'title-tag' );
 
     add_theme_support( 'html5', array( 'search-form' ) );
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 145, 145, true );
-   
+
     // news thumbnail
     add_image_size( 'news_thumb', 300, 230, true );
 
     remove_action( 'wp_head', 'wp_generator' );
     remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
     remove_action( 'wp_print_styles', 'print_emoji_styles' );
-    
+
     load_theme_textdomain( 'ukmtheme', get_template_directory() . '/lang' );
 
     register_nav_menus( array(
@@ -214,17 +214,17 @@ add_filter( 'upload_mimes','add_custom_mime_types' );
       'svg' => 'image/svg+xml'
     ));
   }
-  
+
 /**
  * Filter Search
  * filter by post type
  */
-  
+
 function ppkas_filter_search($query) {
   if ($query->is_search) {
     $query->set('post_type', array( 'page', 'staff', 'gallery', 'publication', 'news', 'event', 'expertise', 'press', 'video' ));
   };
-  
+
   return $query;
 };
 add_filter('pre_get_posts', 'ppkas_filter_search');
@@ -259,7 +259,7 @@ if (!function_exists('ppkas_widgets_init')) {
     ) );
 
     register_sidebar( array(
-      'name'            => __( 'Frontpage: Three Column', 'ukmtheme' ), 
+      'name'            => __( 'Frontpage: Three Column', 'ukmtheme' ),
       'id'              => 'sidebar-3',
       'description'     => __( 'Appears when using the optional Front Page', 'ukmtheme' ),
       'before_widget'   => '<div class="uk-width-medium-1-3" style="min-height: 100px;">',

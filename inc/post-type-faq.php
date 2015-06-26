@@ -1,6 +1,6 @@
 <?php
 /**
- * @package UKMTheme
+ * @package ppkas
  * @subpackage UKM Twenty Fifteen
  * @version 1.0
  * @author Jamaludin Rajalu
@@ -11,23 +11,23 @@
 function ppkas_faq() {
 
   $labels = array(
-    'name'                => _x( 'FAQs', 'Post Type General Name', 'ukmtheme' ),
-    'singular_name'       => _x( 'FAQ', 'Post Type Singular Name', 'ukmtheme' ),
-    'menu_name'           => __( 'FAQ', 'ukmtheme' ),
-    'parent_item_colon'   => __( 'Parent FAQ:', 'ukmtheme' ),
-    'all_items'           => __( 'All FAQs', 'ukmtheme' ),
-    'view_item'           => __( 'View FAQ', 'ukmtheme' ),
-    'add_new_item'        => __( 'Add New FAQ', 'ukmtheme' ),
-    'add_new'             => __( 'New FAQ', 'ukmtheme' ),
-    'edit_item'           => __( 'Edit FAQ', 'ukmtheme' ),
-    'update_item'         => __( 'Update FAQ', 'ukmtheme' ),
-    'search_items'        => __( 'Search FAQs', 'ukmtheme' ),
-    'not_found'           => __( 'No FAQs found', 'ukmtheme' ),
-    'not_found_in_trash'  => __( 'No FAQs found in Trash', 'ukmtheme' ),
+    'name'                => _x( 'FAQs', 'Post Type General Name', 'ppkas' ),
+    'singular_name'       => _x( 'FAQ', 'Post Type Singular Name', 'ppkas' ),
+    'menu_name'           => __( 'FAQ', 'ppkas' ),
+    'parent_item_colon'   => __( 'Parent FAQ:', 'ppkas' ),
+    'all_items'           => __( 'All FAQs', 'ppkas' ),
+    'view_item'           => __( 'View FAQ', 'ppkas' ),
+    'add_new_item'        => __( 'Add New FAQ', 'ppkas' ),
+    'add_new'             => __( 'New FAQ', 'ppkas' ),
+    'edit_item'           => __( 'Edit FAQ', 'ppkas' ),
+    'update_item'         => __( 'Update FAQ', 'ppkas' ),
+    'search_items'        => __( 'Search FAQs', 'ppkas' ),
+    'not_found'           => __( 'No FAQs found', 'ppkas' ),
+    'not_found_in_trash'  => __( 'No FAQs found in Trash', 'ppkas' ),
   );
   $args = array(
-    'label'               => __( 'faq', 'ukmtheme' ),
-    'description'         => __( 'FAQ manager for UKM', 'ukmtheme' ),
+    'label'               => __( 'faq', 'ppkas' ),
+    'description'         => __( 'FAQ manager for UKM', 'ppkas' ),
     'labels'              => $labels,
     'supports'            => array( 'title', 'editor', 'revisions', ),
     'taxonomies'          => array( 'faqcat' ),
@@ -56,20 +56,20 @@ add_action( 'init', 'ppkas_faq', 0 );
 function ppkas_faq_category()  {
 
   $labels = array(
-    'name'                       => _x( 'FAQ Categories', 'Taxonomy General Name', 'ukmtheme' ),
-    'singular_name'              => _x( 'FAQ Category', 'Taxonomy Singular Name', 'ukmtheme' ),
-    'menu_name'                  => __( 'FAQ Category', 'ukmtheme' ),
-    'all_items'                  => __( 'All Categories', 'ukmtheme' ),
-    'parent_item'                => __( 'Parent Category', 'ukmtheme' ),
-    'parent_item_colon'          => __( 'Parent Category:', 'ukmtheme' ),
-    'new_item_name'              => __( 'New Category Name', 'ukmtheme' ),
-    'add_new_item'               => __( 'Add New Category', 'ukmtheme' ),
-    'edit_item'                  => __( 'Edit Category', 'ukmtheme' ),
-    'update_item'                => __( 'Update Category', 'ukmtheme' ),
-    'separate_items_with_commas' => __( 'Separate Categories with commas', 'ukmtheme' ),
-    'search_items'               => __( 'Search Categories', 'ukmtheme' ),
-    'add_or_remove_items'        => __( 'Add or remove Categories', 'ukmtheme' ),
-    'choose_from_most_used'      => __( 'Choose from the most used Categories', 'ukmtheme' ),
+    'name'                       => _x( 'FAQ Categories', 'Taxonomy General Name', 'ppkas' ),
+    'singular_name'              => _x( 'FAQ Category', 'Taxonomy Singular Name', 'ppkas' ),
+    'menu_name'                  => __( 'FAQ Category', 'ppkas' ),
+    'all_items'                  => __( 'All Categories', 'ppkas' ),
+    'parent_item'                => __( 'Parent Category', 'ppkas' ),
+    'parent_item_colon'          => __( 'Parent Category:', 'ppkas' ),
+    'new_item_name'              => __( 'New Category Name', 'ppkas' ),
+    'add_new_item'               => __( 'Add New Category', 'ppkas' ),
+    'edit_item'                  => __( 'Edit Category', 'ppkas' ),
+    'update_item'                => __( 'Update Category', 'ppkas' ),
+    'separate_items_with_commas' => __( 'Separate Categories with commas', 'ppkas' ),
+    'search_items'               => __( 'Search Categories', 'ppkas' ),
+    'add_or_remove_items'        => __( 'Add or remove Categories', 'ppkas' ),
+    'choose_from_most_used'      => __( 'Choose from the most used Categories', 'ppkas' ),
   );
   $args = array(
     'labels'                     => $labels,
@@ -96,15 +96,15 @@ add_filter('manage_edit-faq_columns', 'ppkas_add_new_faq_columns');
 function ppkas_add_new_faq_columns( $columns ){
   $columns = array(
     'cb'                          => '<input type="checkbox">',
-    'title'                       => __( 'Question', 'ukmtheme' ),
-    'faqcat'                      => __( 'Category', 'ukmtheme' ),
+    'title'                       => __( 'Question', 'ppkas' ),
+    'faqcat'                      => __( 'Category', 'ppkas' ),
   );
   return $columns;
 }
 
 function ppkas_faq_custom_columns( $column ){
   global $post;
-  
+
   switch ($column) {
     case 'faqcat' : echo get_the_term_list( $post->ID, 'faqcat', '', ', ',''); break;
   }

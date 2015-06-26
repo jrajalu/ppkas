@@ -4,7 +4,7 @@
  * @subpackage UKM Twenty Fifteen
  * @version 1.0
  * @author Jamaludin Rajalu
- * 
+ *
  * Widget: Address with social icon
  */
 
@@ -72,13 +72,13 @@ class UKMtheme_Social_Widget extends WP_Widget {
 
     ?>
     <p>
-    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
     </p>
     <p>
     <textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id('textarea_address'); ?>" name="<?php echo $this->get_field_name('textarea_address'); ?>"><?php echo $textarea_address; ?></textarea>
     </p>
-    <?php 
+    <?php
   }
 
   public function update( $new_instance, $old_instance ) {
@@ -92,7 +92,7 @@ class UKMtheme_Social_Widget extends WP_Widget {
     return $instance;
   }
 
-} 
+}
 
 
 function register_ukmtheme_social_widget() {

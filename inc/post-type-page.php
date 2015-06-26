@@ -1,6 +1,6 @@
 <?php
 /**
- * @package UKMTheme
+ * @package ppkas
  * @subpackage UKM Twenty Fifteen
  * @version 1.0
  * @author Jamaludin Rajalu

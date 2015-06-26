@@ -1,6 +1,6 @@
 <?php
 /**
- * @package UKMTheme
+ * @package ppkas
  * @subpackage UKM Twenty Fifteen
  * @version 1.0
  * @author Jamaludin Rajalu
@@ -12,7 +12,7 @@
 function title_staff_input ( $title ) {
 
   if ( get_post_type() == 'staff' ) {
-    $title = __( 'Enter staff name here', 'ukmtheme' );
+    $title = __( 'Enter staff name here', 'ppkas' );
   }
   return $title;
 }
@@ -21,22 +21,22 @@ add_filter( 'enter_title_here', 'title_staff_input' );
 
 // Post Type: Staff
 // Register Custom Post Type
-function ukmtheme_staff_directory() {
+function ppkas_staff_directory() {
 
   $labels = array(
-    'name'                => _x( 'Staffs', 'Post Type General Name', 'ukmtheme' ),
-    'singular_name'       => _x( 'Staff', 'Post Type Singular Name', 'ukmtheme' ),
-    'menu_name'           => __( 'Staff Directory', 'ukmtheme' ),
-    'parent_item_colon'   => __( 'Parent Staff:', 'ukmtheme' ),
-    'all_items'           => __( 'All Staffs', 'ukmtheme' ),
-    'view_item'           => __( 'View Staff', 'ukmtheme' ),
-    'add_new_item'        => __( 'Add New Staff', 'ukmtheme' ),
-    'add_new'             => __( 'Add New', 'ukmtheme' ),
-    'edit_item'           => __( 'Edit Staff', 'ukmtheme' ),
-    'update_item'         => __( 'Update Staff', 'ukmtheme' ),
-    'search_items'        => __( 'Search Staffs', 'ukmtheme' ),
-    'not_found'           => __( 'Not found', 'ukmtheme' ),
-    'not_found_in_trash'  => __( 'Not found in Trash', 'ukmtheme' ),
+    'name'                => _x( 'Staffs', 'Post Type General Name', 'ppkas' ),
+    'singular_name'       => _x( 'Staff', 'Post Type Singular Name', 'ppkas' ),
+    'menu_name'           => __( 'Staff Directory', 'ppkas' ),
+    'parent_item_colon'   => __( 'Parent Staff:', 'ppkas' ),
+    'all_items'           => __( 'All Staffs', 'ppkas' ),
+    'view_item'           => __( 'View Staff', 'ppkas' ),
+    'add_new_item'        => __( 'Add New Staff', 'ppkas' ),
+    'add_new'             => __( 'Add New', 'ppkas' ),
+    'edit_item'           => __( 'Edit Staff', 'ppkas' ),
+    'update_item'         => __( 'Update Staff', 'ppkas' ),
+    'search_items'        => __( 'Search Staffs', 'ppkas' ),
+    'not_found'           => __( 'Not found', 'ppkas' ),
+    'not_found_in_trash'  => __( 'Not found in Trash', 'ppkas' ),
   );
   $rewrite = array(
     'slug'                => 'staff-directory',
@@ -45,8 +45,8 @@ function ukmtheme_staff_directory() {
     'feeds'               => true,
   );
   $args = array(
-    'label'               => __( 'staff', 'ukmtheme' ),
-    'description'         => __( 'Latest Staffs', 'ukmtheme' ),
+    'label'               => __( 'staff', 'ppkas' ),
+    'description'         => __( 'Latest Staffs', 'ppkas' ),
     'labels'              => $labels,
     'supports'            => array( 'title', 'revisions', ),
     'taxonomies'          => array( 'department', 'position' ),
@@ -71,28 +71,28 @@ function ukmtheme_staff_directory() {
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'ukmtheme_staff_directory', 0 );
+add_action( 'init', 'ppkas_staff_directory', 0 );
 
 // Staff Position
 // Register Custom Taxonomy
-function ukmtheme_staff_position_taxonomy() {
+function ppkas_staff_position_taxonomy() {
 
   $labels = array(
-    'name'                       => _x( 'Positions', 'Taxonomy General Name', 'ukmtheme' ),
-    'singular_name'              => _x( 'Position', 'Taxonomy Singular Name', 'ukmtheme' ),
-    'menu_name'                  => __( 'Position', 'ukmtheme' ),
-    'all_items'                  => __( 'All Items', 'ukmtheme' ),
-    'parent_item'                => __( 'Parent Position', 'ukmtheme' ),
-    'parent_item_colon'          => __( 'Parent Position:', 'ukmtheme' ),
-    'new_item_name'              => __( 'New Position Name', 'ukmtheme' ),
-    'add_new_item'               => __( 'Add New Position', 'ukmtheme' ),
-    'edit_item'                  => __( 'Edit Position', 'ukmtheme' ),
-    'update_item'                => __( 'Update Position', 'ukmtheme' ),
-    'separate_items_with_commas' => __( 'Separate Positions with commas', 'ukmtheme' ),
-    'search_items'               => __( 'Search Positions', 'ukmtheme' ),
-    'add_or_remove_items'        => __( 'Add or remove Positions', 'ukmtheme' ),
-    'choose_from_most_used'      => __( 'Choose from the most used Positions', 'ukmtheme' ),
-    'not_found'                  => __( 'Not Found', 'ukmtheme' ),
+    'name'                       => _x( 'Positions', 'Taxonomy General Name', 'ppkas' ),
+    'singular_name'              => _x( 'Position', 'Taxonomy Singular Name', 'ppkas' ),
+    'menu_name'                  => __( 'Position', 'ppkas' ),
+    'all_items'                  => __( 'All Items', 'ppkas' ),
+    'parent_item'                => __( 'Parent Position', 'ppkas' ),
+    'parent_item_colon'          => __( 'Parent Position:', 'ppkas' ),
+    'new_item_name'              => __( 'New Position Name', 'ppkas' ),
+    'add_new_item'               => __( 'Add New Position', 'ppkas' ),
+    'edit_item'                  => __( 'Edit Position', 'ppkas' ),
+    'update_item'                => __( 'Update Position', 'ppkas' ),
+    'separate_items_with_commas' => __( 'Separate Positions with commas', 'ppkas' ),
+    'search_items'               => __( 'Search Positions', 'ppkas' ),
+    'add_or_remove_items'        => __( 'Add or remove Positions', 'ppkas' ),
+    'choose_from_most_used'      => __( 'Choose from the most used Positions', 'ppkas' ),
+    'not_found'                  => __( 'Not Found', 'ppkas' ),
   );
   $rewrite = array(
     'slug'                       => 'staff-position',
@@ -115,28 +115,28 @@ function ukmtheme_staff_position_taxonomy() {
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'ukmtheme_staff_position_taxonomy', 0 );
+add_action( 'init', 'ppkas_staff_position_taxonomy', 0 );
 
 // Staff Department
 // Register Custom Taxonomy
-function ukmtheme_staff_department_taxonomy() {
+function ppkas_staff_department_taxonomy() {
 
   $labels = array(
-    'name'                       => _x( 'Departments', 'Taxonomy General Name', 'ukmtheme' ),
-    'singular_name'              => _x( 'Department', 'Taxonomy Singular Name', 'ukmtheme' ),
-    'menu_name'                  => __( 'Department', 'ukmtheme' ),
-    'all_items'                  => __( 'All Departments', 'ukmtheme' ),
-    'parent_item'                => __( 'Parent Department', 'ukmtheme' ),
-    'parent_item_colon'          => __( 'Parent Department:', 'ukmtheme' ),
-    'new_item_name'              => __( 'New Department Name', 'ukmtheme' ),
-    'add_new_item'               => __( 'Add New Department', 'ukmtheme' ),
-    'edit_item'                  => __( 'Edit Department', 'ukmtheme' ),
-    'update_item'                => __( 'Update Department', 'ukmtheme' ),
-    'separate_items_with_commas' => __( 'Separate departments with commas', 'ukmtheme' ),
-    'search_items'               => __( 'Search Departments', 'ukmtheme' ),
-    'add_or_remove_items'        => __( 'Add or remove departments', 'ukmtheme' ),
-    'choose_from_most_used'      => __( 'Choose from the most used departments', 'ukmtheme' ),
-    'not_found'                  => __( 'Not Found', 'ukmtheme' ),
+    'name'                       => _x( 'Departments', 'Taxonomy General Name', 'ppkas' ),
+    'singular_name'              => _x( 'Department', 'Taxonomy Singular Name', 'ppkas' ),
+    'menu_name'                  => __( 'Department', 'ppkas' ),
+    'all_items'                  => __( 'All Departments', 'ppkas' ),
+    'parent_item'                => __( 'Parent Department', 'ppkas' ),
+    'parent_item_colon'          => __( 'Parent Department:', 'ppkas' ),
+    'new_item_name'              => __( 'New Department Name', 'ppkas' ),
+    'add_new_item'               => __( 'Add New Department', 'ppkas' ),
+    'edit_item'                  => __( 'Edit Department', 'ppkas' ),
+    'update_item'                => __( 'Update Department', 'ppkas' ),
+    'separate_items_with_commas' => __( 'Separate departments with commas', 'ppkas' ),
+    'search_items'               => __( 'Search Departments', 'ppkas' ),
+    'add_or_remove_items'        => __( 'Add or remove departments', 'ppkas' ),
+    'choose_from_most_used'      => __( 'Choose from the most used departments', 'ppkas' ),
+    'not_found'                  => __( 'Not Found', 'ppkas' ),
   );
   $rewrite = array(
     'slug'                       => 'staff-department',
@@ -159,7 +159,7 @@ function ukmtheme_staff_department_taxonomy() {
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'ukmtheme_staff_department_taxonomy', 0 );
+add_action( 'init', 'ppkas_staff_department_taxonomy', 0 );
 
 // FILTER BY CATEGORY: POSITION/DEPARTMENT
 
@@ -172,7 +172,7 @@ function restrict_listings_by_department() {
     $term = isset($wp_query->query['department']) ? $wp_query->query['department'] :'';
     $department_taxonomy = get_taxonomy($taxonomy);
         wp_dropdown_categories(array(
-            'show_option_all' =>  __( 'All Department', 'ukmtheme' ),
+            'show_option_all' =>  __( 'All Department', 'ppkas' ),
             'taxonomy'        =>  $taxonomy,
             'name'            =>  'department',
             'orderby'         =>  'name',
@@ -203,7 +203,7 @@ function restrict_listings_by_position() {
     $term = isset($wp_query->query['position']) ? $wp_query->query['position'] :'';
     $position_taxonomy = get_taxonomy($taxonomy);
         wp_dropdown_categories(array(
-            'show_option_all' =>  __( 'All Position', 'ukmtheme' ),
+            'show_option_all' =>  __( 'All Position', 'ppkas' ),
             'taxonomy'        =>  $taxonomy,
             'name'            =>  'position',
             'orderby'         =>  'name',
@@ -239,17 +239,17 @@ add_filter('manage_edit-staff_columns', 'ppkas_add_new_staff_columns');
 function ppkas_add_new_staff_columns( $columns ){
   $columns = array(
     'cb'                  => '<input type="checkbox">',
-    'ppkas_staff_photo'      => __( 'Photo', 'ukmtheme' ),
-    'title'               => __( 'Name', 'ukmtheme' ),
-    'ppkas_staff_position'   => __( 'Position', 'ukmtheme' ),
-    'ppkas_staff_department' => __( 'Department', 'ukmtheme' )   
+    'ppkas_staff_photo'      => __( 'Photo', 'ppkas' ),
+    'title'               => __( 'Name', 'ppkas' ),
+    'ppkas_staff_position'   => __( 'Position', 'ppkas' ),
+    'ppkas_staff_department' => __( 'Department', 'ppkas' )
   );
   return $columns;
 }
 
 function ppkas_staff_custom_columns( $column ){
   global $post;
-  
+
   switch ($column) {
     case 'ppkas_staff_photo' :
       $staff_photo = get_post_meta($post->ID,'ppkas_staff_photo',true);

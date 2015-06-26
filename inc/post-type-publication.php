@@ -1,6 +1,6 @@
 <?php
 /**
- * @package UKMTheme
+ * @package ppkas
  * @subpackage UKM Twenty Fifteen
  * @version 1.0
  * @author Jamaludin Rajalu
@@ -10,7 +10,7 @@
 
 function title_publication_input ( $title ) {
   if ( get_post_type() == 'publication' ) {
-    $title = __( 'Enter publication name here', 'ukmtheme' );
+    $title = __( 'Enter publication name here', 'ppkas' );
   }
   return $title;
 } // End title_text_input()
@@ -19,23 +19,23 @@ add_filter( 'enter_title_here', 'title_publication_input' );
 function ppkas_publication() {
 
   $labels = array(
-    'name'                => _x( 'Publications', 'Post Type General Name', 'ukmtheme' ),
-    'singular_name'       => _x( 'Publication', 'Post Type Singular Name', 'ukmtheme' ),
-    'menu_name'           => __( 'Publication', 'ukmtheme' ),
-    'parent_item_colon'   => __( 'Parent Publication:', 'ukmtheme' ),
-    'all_items'           => __( 'All Publications', 'ukmtheme' ),
-    'view_item'           => __( 'View Publication', 'ukmtheme' ),
-    'add_new_item'        => __( 'Add New Publication', 'ukmtheme' ),
-    'add_new'             => __( 'New Publication', 'ukmtheme' ),
-    'edit_item'           => __( 'Edit Publication', 'ukmtheme' ),
-    'update_item'         => __( 'Update Publication', 'ukmtheme' ),
-    'search_items'        => __( 'Search Publications', 'ukmtheme' ),
-    'not_found'           => __( 'No Publications found', 'ukmtheme' ),
-    'not_found_in_trash'  => __( 'No Publications found in Trash', 'ukmtheme' ),
+    'name'                => _x( 'Publications', 'Post Type General Name', 'ppkas' ),
+    'singular_name'       => _x( 'Publication', 'Post Type Singular Name', 'ppkas' ),
+    'menu_name'           => __( 'Publication', 'ppkas' ),
+    'parent_item_colon'   => __( 'Parent Publication:', 'ppkas' ),
+    'all_items'           => __( 'All Publications', 'ppkas' ),
+    'view_item'           => __( 'View Publication', 'ppkas' ),
+    'add_new_item'        => __( 'Add New Publication', 'ppkas' ),
+    'add_new'             => __( 'New Publication', 'ppkas' ),
+    'edit_item'           => __( 'Edit Publication', 'ppkas' ),
+    'update_item'         => __( 'Update Publication', 'ppkas' ),
+    'search_items'        => __( 'Search Publications', 'ppkas' ),
+    'not_found'           => __( 'No Publications found', 'ppkas' ),
+    'not_found_in_trash'  => __( 'No Publications found in Trash', 'ppkas' ),
   );
   $args = array(
-    'label'               => __( 'publication', 'ukmtheme' ),
-    'description'         => __( 'Publication information pages', 'ukmtheme' ),
+    'label'               => __( 'publication', 'ppkas' ),
+    'description'         => __( 'Publication information pages', 'ppkas' ),
     'labels'              => $labels,
     'supports'            => array( 'title', 'editor', ),
     'taxonomies'          => array( 'pubcat' ),
@@ -64,20 +64,20 @@ add_action( 'init', 'ppkas_publication', 0 );
 function ppkas_publication_category()  {
 
   $labels = array(
-    'name'                       => _x( 'Publication Categories', 'Taxonomy General Name', 'ukmtheme' ),
-    'singular_name'              => _x( 'Publication Category', 'Taxonomy Singular Name', 'ukmtheme' ),
-    'menu_name'                  => __( 'Publication Category', 'ukmtheme' ),
-    'all_items'                  => __( 'All Categories', 'ukmtheme' ),
-    'parent_item'                => __( 'Parent Category', 'ukmtheme' ),
-    'parent_item_colon'          => __( 'Parent Category:', 'ukmtheme' ),
-    'new_item_name'              => __( 'New Category Name', 'ukmtheme' ),
-    'add_new_item'               => __( 'Add New Category', 'ukmtheme' ),
-    'edit_item'                  => __( 'Edit Category', 'ukmtheme' ),
-    'update_item'                => __( 'Update Category', 'ukmtheme' ),
-    'separate_items_with_commas' => __( 'Separate Categories with commas', 'ukmtheme' ),
-    'search_items'               => __( 'Search Categories', 'ukmtheme' ),
-    'add_or_remove_items'        => __( 'Add or remove Categories', 'ukmtheme' ),
-    'choose_from_most_used'      => __( 'Choose from the most used Categories', 'ukmtheme' ),
+    'name'                       => _x( 'Publication Categories', 'Taxonomy General Name', 'ppkas' ),
+    'singular_name'              => _x( 'Publication Category', 'Taxonomy Singular Name', 'ppkas' ),
+    'menu_name'                  => __( 'Publication Category', 'ppkas' ),
+    'all_items'                  => __( 'All Categories', 'ppkas' ),
+    'parent_item'                => __( 'Parent Category', 'ppkas' ),
+    'parent_item_colon'          => __( 'Parent Category:', 'ppkas' ),
+    'new_item_name'              => __( 'New Category Name', 'ppkas' ),
+    'add_new_item'               => __( 'Add New Category', 'ppkas' ),
+    'edit_item'                  => __( 'Edit Category', 'ppkas' ),
+    'update_item'                => __( 'Update Category', 'ppkas' ),
+    'separate_items_with_commas' => __( 'Separate Categories with commas', 'ppkas' ),
+    'search_items'               => __( 'Search Categories', 'ppkas' ),
+    'add_or_remove_items'        => __( 'Add or remove Categories', 'ppkas' ),
+    'choose_from_most_used'      => __( 'Choose from the most used Categories', 'ppkas' ),
   );
   $args = array(
     'labels'                     => $labels,
@@ -104,19 +104,19 @@ add_filter('manage_edit-publication_columns', 'ppkas_add_new_publication_columns
 function ppkas_add_new_publication_columns( $columns ){
   $columns = array(
     'cb'                          => '<input type="checkbox">',
-    'ppkas_publication_cover'        => __( 'Cover', 'ukmtheme' ),
-    'title'                       => __( 'Title', 'ukmtheme' ),
-    'pubcat'                      => __( 'Category', 'ukmtheme' ),
-    'ppkas_publication_author'       => __( 'Author', 'ukmtheme' ),
-    'ppkas_publication_publisher'    => __( 'Publisher', 'ukmtheme' ),
-    'ppkas_publication_year'         => __( 'Year', 'ukmtheme' )
+    'ppkas_publication_cover'        => __( 'Cover', 'ppkas' ),
+    'title'                       => __( 'Title', 'ppkas' ),
+    'pubcat'                      => __( 'Category', 'ppkas' ),
+    'ppkas_publication_author'       => __( 'Author', 'ppkas' ),
+    'ppkas_publication_publisher'    => __( 'Publisher', 'ppkas' ),
+    'ppkas_publication_year'         => __( 'Year', 'ppkas' )
   );
   return $columns;
 }
 
 function ppkas_publication_custom_columns( $column ){
   global $post;
-  
+
   switch ($column) {
     case 'ppkas_publication_cover' :
       $pub_cover = get_post_meta($post->ID,'ppkas_publication_cover',true);
@@ -129,7 +129,7 @@ function ppkas_publication_custom_columns( $column ){
     case 'pubcat' : echo get_the_term_list( $post->ID, 'pubcat', '', ', ',''); break;
     case 'ppkas_publication_author' : echo get_post_meta($post->ID,'ppkas_publication_author',true); break;
     case 'ppkas_publication_publisher' : echo get_post_meta($post->ID,'ppkas_publication_publisher',true); break;
-    case 'ppkas_publication_year' : echo get_post_meta($post->ID,'ppkas_publication_year',true); 
+    case 'ppkas_publication_year' : echo get_post_meta($post->ID,'ppkas_publication_year',true);
   }
 }
 ?>

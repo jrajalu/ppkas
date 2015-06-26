@@ -4,7 +4,7 @@
  * @subpackage UKM Twenty Fifteen
  * @version 1.0
  * @author Jamaludin Rajalu
- * 
+ *
  * Plugin Name: Post type archive in menu
  * Plugin URI: http://lukapeharda.com
  * Description: Add post type (custom) archive links easily through WP builtin menu system
@@ -31,7 +31,7 @@ function addPostTypeArchivesMenu()
    * Fetching public post typs
    */
   $postTypes = get_post_types(array('public' => true));
-  
+
   /*
    * If there aren't any post type we'll escape
    */
@@ -51,7 +51,7 @@ function addPostTypeArchivesMenu()
         <?php
             /*
              * Skiping current post type if it doesn't support archive
-             */ 
+             */
             if (false === $postTypeObject->has_archive) {
                 continue;
             }
@@ -68,7 +68,7 @@ function addPostTypeArchivesMenu()
       <?php if ($a === 1000) : ?>
         <li><?php _e('No results found.'); ?></li>
       <?php endif; ?>
-      </ul>     
+      </ul>
     </div>
 
     <p class="button-controls">
@@ -100,7 +100,7 @@ add_action('admin_menu', 'addMetaBox');
 
 /**
  * Changing link URL if needed (for different permalink structures)
- * 
+ *
  * @param object $menuItem
  * @return object
  */
@@ -109,13 +109,13 @@ function correctArchiveLink($menuItem)
       if ($menuItem->type != 'post_type_archive') {
           return $menuItem;
       }
-      
+
       $postType = $menuItem->object;
       $menuItem->url = get_post_type_archive_link($postType);
 
       return $menuItem;
  }
- 
+
  /*
   * Fix archives link when changing permalink structure
   */
@@ -123,7 +123,7 @@ function correctArchiveLink($menuItem)
 
 /**
  * Checks to see if items needs to be made "current" in menu. It works for post archive page and for singular page
- * 
+ *
  * @param array $items
  * @return $items
  */
@@ -131,7 +131,7 @@ function correctArchiveLink($menuItem)
 function makeItemCurrentInMenu($items)
 {
     foreach ($items as $item) {
-        
+
         if ('post_type_archive' != $item->type) {
             continue;
         }

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package UKMTheme
+ * @package ppkas
  * @subpackage UKM Twenty Fifteen
  * @version 1.0
  * @author Jamaludin Rajalu
@@ -9,9 +9,9 @@
  */
 require_once get_template_directory() . '/lib/tgmpa/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'ukmtheme_register_required_plugins' );
+add_action( 'tgmpa_register', 'ppkas_register_required_plugins' );
 
-function ukmtheme_register_required_plugins() {
+function ppkas_register_required_plugins() {
 
   $plugins = array(
 
@@ -62,7 +62,7 @@ function ukmtheme_register_required_plugins() {
       'slug'      => 'simple-page-ordering',
       'required'  => false,
     ),
-    
+
     array(
       'name'      => 'TablePress',
       'slug'      => 'tablepress',
@@ -92,7 +92,7 @@ function ukmtheme_register_required_plugins() {
       'slug'      => 'lockdown-wp-admin',
       'required'  => false,
     ),
-      
+
   );
 
   /**
