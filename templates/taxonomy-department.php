@@ -48,25 +48,15 @@ get_header(); ?>
           <li><i class="uk-icon-envelope-square"></i> <?php echo get_post_meta($post->ID, 'ppkas_staff_email', true); ?></li>
         </ul>
         <?php
-         $scope               = get_post_meta($post->ID, 'ppkas_staff_work_scope', true);
-         $scope_desc          = get_post_meta($post->ID, 'ppkas_staff_work_scope_desc', true);
-         $scope_title         = get_post_meta($post->ID, 'ppkas_staff_work_scope_title', true);
-         $scope_title_custom  = get_post_meta($post->ID, 'ppkas_staff_work_scope_title_custom', true);
+          $cvLink = get_post_meta(get_the_ID(),'ppkas_staff_cv_link',true);
 
-          if($scope == on) {
-            if($scope_title == on) { ?>
-              <h4><?php echo $scope_title_custom; ?></h4>
-            <?php }
-            else { ?>
-              <h3><?php _e( 'Scope of Work','ukmtheme' ); ?></h3>
-            <?php } ?>
-          <span class="staff-scope">
-            <?php echo get_post_meta($post->ID, 'ppkas_staff_work_scope_desc', true); ?>
-          </span>
+          if( $cvLink == on ) { ?>
+            <a href="<?php echo get_permalink(); ?>">Curriculum Vitae</a>
           <?php }
           else {
             echo '';
-          } ?>
+          }
+        ?>
           <?php get_template_part('templates/content','edit' ); ?>
       </div>
     </div>

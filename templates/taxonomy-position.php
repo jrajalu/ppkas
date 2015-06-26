@@ -13,12 +13,12 @@ get_header(); ?>
 
   <?php
 
-    $staff = new WP_Query( array( 
+    $staff = new WP_Query( array(
       'post_type'       => 'staff',
       'position'        => get_the_term_list( $post->ID, 'position' ),
-      'posts_per_page'  => -1, 
-      'orderby'         => 'menu_order', 
-      'order'           => 'ASC' 
+      'posts_per_page'  => -1,
+      'orderby'         => 'menu_order',
+      'order'           => 'ASC'
     ));
 
     while ( $staff->have_posts() ) : $staff->the_post();
@@ -27,9 +27,9 @@ get_header(); ?>
     <div class="sm-col-3-12">
         <div class="staff-photo pad-right">
           <?php
-            $staff_photo = get_post_meta($post->ID,'ut_staff_photo',true);
+            $staff_photo = get_post_meta($post->ID,'ppkas_staff_photo',true);
             if ( $staff_photo ) { ?>
-            <img src="<?php echo get_post_meta($post->ID,'ut_staff_photo',true); ?>" alt="">
+            <img src="<?php echo get_post_meta($post->ID,'ppkas_staff_photo',true); ?>" alt="">
             <?php }
 
             else { ?>
@@ -44,29 +44,19 @@ get_header(); ?>
         <h3><?php the_title(); ?></h3>
         <ul>
           <li><?php echo get_the_term_list( $post->ID, 'position', '', ', ', '' ); ?></li>
-          <li><i class="uk-icon-phone-square"></i> <?php echo get_post_meta($post->ID, 'ut_staff_phone', true); ?></li>
-          <li><i class="uk-icon-envelope-square"></i> <?php echo get_post_meta($post->ID, 'ut_staff_email', true); ?></li>
+          <li><i class="uk-icon-phone-square"></i> <?php echo get_post_meta($post->ID, 'ppkas_staff_phone', true); ?></li>
+          <li><i class="uk-icon-envelope-square"></i> <?php echo get_post_meta($post->ID, 'ppkas_staff_email', true); ?></li>
         </ul>
         <?php
-         $scope               = get_post_meta($post->ID, 'ut_staff_work_scope', true);
-         $scope_desc          = get_post_meta($post->ID, 'ut_staff_work_scope_desc', true);
-         $scope_title         = get_post_meta($post->ID, 'ut_staff_work_scope_title', true);
-         $scope_title_custom  = get_post_meta($post->ID, 'ut_staff_work_scope_title_custom', true);
+          $cvLink = get_post_meta(get_the_ID(),'ppkas_staff_cv_link',true);
 
-          if($scope == on) { 
-            if($scope_title == on) { ?>
-              <h4><?php echo $scope_title_custom; ?></h4>            
-            <?php }          
-            else { ?>
-              <h3><?php _e( 'Scope of Work','ukmtheme' ); ?></h3>
-            <?php } ?>
-          <span class="staff-scope">
-            <?php echo get_post_meta($post->ID, 'ut_staff_work_scope_desc', true); ?>
-          </span>
-          <?php }  
+          if( $cvLink == on ) { ?>
+            <a href="<?php echo get_permalink(); ?>">Curriculum Vitae</a>
+          <?php }
           else {
             echo '';
-          } ?>
+          }
+        ?>
           <?php get_template_part('templates/content','edit' ); ?>
       </div>
     </div>

@@ -14,9 +14,9 @@ get_header(); ?>
       <div class="sm-col-3-12">
           <div class="staff-photo pad-right">
             <?php
-              $staff_photo = get_post_meta($post->ID,'ut_staff_photo',true);
+              $staff_photo = get_post_meta(get_the_ID(),'ppkas_staff_photo',true);
               if ( $staff_photo ) { ?>
-              <img src="<?php echo get_post_meta($post->ID,'ut_staff_photo',true); ?>" alt="">
+              <img src="<?php echo get_post_meta(get_the_ID(),'ppkas_staff_photo',true); ?>" alt="">
               <?php }
 
               else { ?>
@@ -29,35 +29,115 @@ get_header(); ?>
       <div class="sm-col-9-12">
         <div class="staff-detail pad-left">
           <ul>
-            <li><?php echo get_the_term_list( $post->ID, 'position', '', ', ', '' ); ?></li>
-            <li><i class="uk-icon-phone-square"></i> <?php echo get_post_meta($post->ID, 'ut_staff_phone', true); ?></li>
-            <li><i class="uk-icon-envelope-square"></i> <?php echo get_post_meta($post->ID, 'ut_staff_email', true); ?></li>
+            <li><?php echo get_the_term_list( get_the_ID(), 'position', '', ', ', '' ); ?></li>
+            <li><i class="uk-icon-phone-square"></i> <?php echo get_post_meta(get_the_ID(), 'ppkas_staff_phone', true); ?></li>
+            <li><i class="uk-icon-envelope-square"></i> <?php echo get_post_meta(get_the_ID(), 'ppkas_staff_email', true); ?></li>
           </ul>
-          <?php
-           $scope               = get_post_meta($post->ID, 'ut_staff_work_scope', true);
-           $scope_desc          = get_post_meta($post->ID, 'ut_staff_work_scope_desc', true);
-           $scope_title         = get_post_meta($post->ID, 'ut_staff_work_scope_title', true);
-           $scope_title_custom  = get_post_meta($post->ID, 'ut_staff_work_scope_title_custom', true);
-
-            if($scope == on) { 
-              if($scope_title == on) { ?>
-                <h4><?php echo $scope_title_custom; ?></h4>            
-              <?php }          
-              else { ?>
-                <h3><?php _e( 'Scope of Work','ukmtheme' ); ?></h3>
-              <?php } ?>
-            <span class="staff-scope">
-              <?php echo get_post_meta($post->ID, 'ut_staff_work_scope_desc', true); ?>
-            </span>
-            <?php }  
-            else {
-              echo '';
-            } ?>
-            <?php get_template_part('templates/content','edit' ); ?>
         </div>
       </div>
     </div>
-    <hr>
+    <?php
+      $cvLink       = get_post_meta(get_the_ID(),'ppkas_staff_cv_link',true);
+      $cvDetails    = get_post_meta(get_the_ID(),'ppkas_staff_cv_details',true);
+      $cvQualify    = get_post_meta(get_the_ID(),'ppkas_staff_cv_academic_qualifications',true);
+      $cvProMember  = get_post_meta(get_the_ID(),'ppkas_staff_cv_current_professional_membership',true);
+      $cvTeachAdmin = get_post_meta(get_the_ID(),'ppkas_staff_cv_current_teaching_and_administrative_responsibilities',true);
+      $cvPrevEmp    = get_post_meta(get_the_ID(),'ppkas_staff_cv_previous_employment',true);
+      $cvConfTrain  = get_post_meta(get_the_ID(),'ppkas_staff_cv_conferences_and_training',true);
+      $cvResPub     = get_post_meta(get_the_ID(),'ppkas_staff_cv_research_and_publications',true);
+      $cvConsult    = get_post_meta(get_the_ID(),'ppkas_staff_cv_consultancy',true);
+      $cvComm       = get_post_meta(get_the_ID(),'ppkas_staff_cv_community_service',true);
+      $cvRelInfo    = get_post_meta(get_the_ID(),'ppkas_staff_cv_other_relevant_information',true);
+
+      if( $cvDetails == on ) { ?>
+        <!-- academic_qualifications -->
+        <div class="column pad-top">
+          <div class="col-3-12 pad-right">
+            Academic Qualifications:
+          </div>
+          <div class="col-9-12">
+            <?php echo $cvQualify; ?>
+          </div>
+        </div>
+        <!-- current_professional_membership -->
+        <div class="column pad-top">
+          <div class="col-3-12 pad-right">
+            Current Professional Membership:
+          </div>
+          <div class="col-9-12">
+            <?php echo $cvProMember; ?>
+          </div>
+        </div>
+        <!-- current_teaching_and_administrative_responsibilities -->
+        <div class="column pad-top">
+          <div class="col-3-12 pad-right">
+            Current Teaching and Administrative Responsibilities:
+          </div>
+          <div class="col-9-12">
+            <?php echo $cvTeachAdmin; ?>
+          </div>
+        </div>
+        <!-- previous_employment -->
+        <div class="column pad-top">
+          <div class="col-3-12 pad-right">
+            Previous Employment:
+          </div>
+          <div class="col-9-12">
+            <?php echo $cvPrevEmp; ?>
+          </div>
+        </div>
+        <!-- conferences_and_training -->
+        <div class="column pad-top">
+          <div class="col-3-12 pad-right">
+            Conferences and Training:
+          </div>
+          <div class="col-9-12">
+            <?php echo $cvConfTrain; ?>
+          </div>
+        </div>
+        <!-- research_and_publications -->
+        <div class="column pad-top">
+          <div class="col-3-12 pad-right">
+            Research and Publications:
+          </div>
+          <div class="col-9-12">
+            <?php echo $cvResPub; ?>
+          </div>
+        </div>
+        <!-- consultancy -->
+        <div class="column pad-top">
+          <div class="col-3-12 pad-right">
+            Research and Publications:
+          </div>
+          <div class="col-9-12">
+            <?php echo $cvConsult; ?>
+          </div>
+        </div>
+        <!-- community_service -->
+        <div class="column pad-top">
+          <div class="col-3-12 pad-right">
+            Community Service:
+          </div>
+          <div class="col-9-12">
+            <?php echo $cvComm; ?>
+          </div>
+        </div>
+        <!-- other_relevant_information -->
+        <div class="column pad-top">
+          <div class="col-3-12 pad-right">
+            Other Relevant Information:
+          </div>
+          <div class="col-9-12">
+            <?php echo $cvRelInfo; ?>
+          </div>
+        </div>
+
+      <?php }
+      else {
+        echo '';
+      }
+    ?>
+    <?php get_template_part('templates/content','edit' ); ?>
     <?php endwhile; ?>
   </article>
   <aside class="aside col-4-12">

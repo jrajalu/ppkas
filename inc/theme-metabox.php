@@ -211,9 +211,16 @@ add_action( 'cmb2_init', 'ppkas_staff_metaboxes' );
     ) );
 
     $staff->add_field( array(
-      'name'    => __( 'Show Curriculum Vitae', 'ppkas' ),
+      'name'    => __( 'Show Curriculum Vitae Link', 'ppkas' ),
       'desc'    => __( 'Show Curriculum Vitae Link', 'ppkas' ),
       'id'      => $prefix . 'staff_cv_link',
+      'type'    => 'checkbox',
+    ) );
+
+    $staff->add_field( array(
+      'name'    => __( 'Show Curriculum Vitae Details', 'ppkas' ),
+      'desc'    => __( 'Show Curriculum Vitae Details', 'ppkas' ),
+      'id'      => $prefix . 'staff_cv_details',
       'type'    => 'checkbox',
     ) );
 
