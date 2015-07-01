@@ -176,6 +176,8 @@ module.exports = function(grunt) {
   // execute grunt task
   
   grunt.registerTask('build', ['copy', 'less', 'uglify', 'usebanner']);
+  
+  grunt.registerTask('script', ['less', 'uglify', 'usebanner']);
 
   grunt.registerTask('dev', ['watch']);
 

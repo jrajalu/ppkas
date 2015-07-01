@@ -160,14 +160,9 @@ add_action( 'after_setup_theme', 'ppkas_module' );
        * Widget items
        * Appearance > Widgets
        */
-      require( get_template_directory() . '/inc/widget-address-with-social.php' );
-      require( get_template_directory() . '/inc/widget-appreciation.php' );
-      require( get_template_directory() . '/inc/widget-event.php' );
       require( get_template_directory() . '/inc/widget-news-list.php' );
-      require( get_template_directory() . '/inc/widget-news-thumbnail.php' );
-      require( get_template_directory() . '/inc/widget-operating-hour.php' );
-      require( get_template_directory() . '/inc/widget-youtube.php' );
-      require( get_template_directory() . '/inc/widget-visitor-counter.php' );
+      require( get_template_directory() . '/inc/widget-small-banner.php' );
+
     }
   }
 
@@ -249,42 +244,12 @@ if (!function_exists('ppkas_widgets_init')) {
     ) );
 
     register_sidebar( array(
-      'name'            => __( 'Frontpage: One Column', 'ukmtheme' ),
+      'name'            => __( 'Frontpage: Small Banner', 'ukmtheme' ),
       'id'              => 'sidebar-2',
-      'description'     => __( 'Appears when using the optional Front Page', 'ukmtheme' ),
-      'before_widget'   => '<div class="column pad-top pad-bottom"><div class="col-12-12">',
-      'after_widget'    => '</div></div>',
-      'before_title'    => '<h3 class="widget-title">',
-      'after_title'     => '</h3>',
-    ) );
-
-    register_sidebar( array(
-      'name'            => __( 'Frontpage: Three Column', 'ukmtheme' ),
-      'id'              => 'sidebar-3',
-      'description'     => __( 'Appears when using the optional Front Page', 'ukmtheme' ),
-      'before_widget'   => '<div class="uk-width-medium-1-3" style="min-height: 100px;">',
+      'description'     => __( 'Use only four widget item', 'ukmtheme' ),
+      'before_widget'   => '<div class="col-3-12 pad-global">',
       'after_widget'    => '</div>',
-      'before_title'    => '<h3 class="widget-title">',
-      'after_title'     => '</h3>',
-    ) );
-
-    register_sidebar( array(
-      'name'            => __( 'Frontpage: Four Column', 'ukmtheme' ),
-      'id'              => 'sidebar-4',
-      'description'     => __( 'Appears when using the optional Front Page', 'ukmtheme' ),
-      'before_widget'   => '<div class="uk-width-medium-1-4" style="min-height: 100px;">',
-      'after_widget'    => '</div>',
-      'before_title'    => '<h3 class="widget-title">',
-      'after_title'     => '</h3>',
-    ) );
-
-    register_sidebar( array(
-      'name'            => __( 'Footer', 'ukmtheme' ),
-      'id'              => 'sidebar-5',
-      'description'     => __( 'Three Column footer widgets', 'ukmtheme' ),
-      'before_widget'   => '<div class="uk-width-medium-1-3" style="min-height: 100px;">',
-      'after_widget'    => '</div>',
-      'before_title'    => '<h3 class="widget-title uk-hidden">',
+      'before_title'    => '<h3 class="uk-hidden">',
       'after_title'     => '</h3>',
     ) );
   }

@@ -4,8 +4,6 @@
  * @version 1.0
  * @author Jamaludin Rajalu
  */
-$counter = get_option( 'ukmtheme_visitor_counter' );
-
 ?>
 </div><!-- stickyfooter -->
 <div class="footer">
@@ -29,9 +27,8 @@ $counter = get_option( 'ukmtheme_visitor_counter' );
     </div>
   </div>
 </div>
-<?php
-  wp_footer();
-  echo '<!-- Version-' . wp_get_theme()->get( 'Version' ) . ' -->';
-?>
+<?php wp_footer(); ?>
+<?php echo '<!-- PPKAS v' . wp_get_theme()->get( 'Version' ) . ' -->'; ?>
+
 </body>
 </html>
