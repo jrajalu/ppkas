@@ -1,7 +1,7 @@
 /*
 Theme Name: PPKAS UniMAP
 Theme URI: https://github.com/jrajalu/ppkas
-Version: 0.1.4
+Version: 0.1.5
 Description: WordPress Theme for PPKAS UniMAP
 Author: Jamaludin Rajalu
 */
@@ -676,6 +676,7 @@ h1.site-name {
 .footer-copyright p {
   margin: 0 0 0 0;
   text-align: center;
+  font-size: 13px;
 }
 .footer-nav {
   display: table;
@@ -698,17 +699,16 @@ h1.site-name {
   color: #ccc;
   text-decoration: none;
 }
-.footer-social-icon {
-  list-style-type: none;
-  padding-left: 0;
+.footer-social-icon .uk-icon-button {
+  margin-right: 10px;
 }
-.footer-social-icon li {
-  display: inline-block;
+.footer-social-icon a,
+.footer-social-icon a:hover,
+.footer-social-icon a:visited {
+  text-decoration: none;
 }
-.footer-social-icon li a {
-  color: #fff;
-  font-size: 24px;
-  padding: 3px;
+.footer-social-icon h3 {
+  color: #eaeaea;
 }
 * {
   margin: 0;
