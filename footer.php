@@ -31,7 +31,7 @@
     <div class="wrap column">
       <div class="col-12-12">
         <p>School Of Environmental Engineering, Universiti Malaysa Perlis, Kompleks Pusat Pengajian Jejawi 3, 02600 Arau, Perlis, MALAYSIA</p>
-        <p>Tel: +60 04 979 8626   Fax: +60 04 979 8636    Email: dean_environmental@unimap.edu.my</p>
+        <p><i class="uk-icon-phone-square"></i> +604-979-8626 | <i class="uk-icon-print"></i> +604-979-8636 | <i class="uk-icon-envelope"></i> dean_environmental@unimap.edu.my</p>
         <p>Best viewed with Mozilla Firefox and Googe Chrome, 1280 x 768 resolution</p>
       </div>
     </div>
