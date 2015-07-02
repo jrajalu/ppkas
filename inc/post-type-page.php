@@ -13,24 +13,24 @@ add_action( 'init', 'ukmtheme_page_taxonomy', 0 );
   function ukmtheme_page_taxonomy() {
 
     $labels = array(
-      'name'                       => _x( 'Page Categories', 'Taxonomy General Name', 'ukmtheme' ),
-      'singular_name'              => _x( 'Category', 'Taxonomy Singular Name', 'ukmtheme' ),
-      'menu_name'                  => __( 'Category', 'ukmtheme' ),
-      'all_items'                  => __( 'All Categories', 'ukmtheme' ),
-      'parent_item'                => __( 'Parent Category', 'ukmtheme' ),
-      'parent_item_colon'          => __( 'Parent Category:', 'ukmtheme' ),
-      'new_item_name'              => __( 'New Category Name', 'ukmtheme' ),
-      'add_new_item'               => __( 'Add New Category', 'ukmtheme' ),
-      'edit_item'                  => __( 'Edit Category', 'ukmtheme' ),
-      'update_item'                => __( 'Update Category', 'ukmtheme' ),
-      'separate_items_with_commas' => __( 'Separate Categories with commas', 'ukmtheme' ),
-      'search_items'               => __( 'Search Categories', 'ukmtheme' ),
-      'add_or_remove_items'        => __( 'Add or remove Categories', 'ukmtheme' ),
-      'choose_from_most_used'      => __( 'Choose from the most used Categories', 'ukmtheme' ),
+      'name'                       => _x( 'Page Sections', 'Taxonomy General Name', 'ukmtheme' ),
+      'singular_name'              => _x( 'Section', 'Taxonomy Singular Name', 'ukmtheme' ),
+      'menu_name'                  => __( 'Section', 'ukmtheme' ),
+      'all_items'                  => __( 'All Sections', 'ukmtheme' ),
+      'parent_item'                => __( 'Parent Section', 'ukmtheme' ),
+      'parent_item_colon'          => __( 'Parent Section:', 'ukmtheme' ),
+      'new_item_name'              => __( 'New Section Name', 'ukmtheme' ),
+      'add_new_item'               => __( 'Add New Section', 'ukmtheme' ),
+      'edit_item'                  => __( 'Edit Section', 'ukmtheme' ),
+      'update_item'                => __( 'Update Section', 'ukmtheme' ),
+      'separate_items_with_commas' => __( 'Separate Sections with commas', 'ukmtheme' ),
+      'search_items'               => __( 'Search Sections', 'ukmtheme' ),
+      'add_or_remove_items'        => __( 'Add or remove Sections', 'ukmtheme' ),
+      'choose_from_most_used'      => __( 'Choose from the most used Sections', 'ukmtheme' ),
       'not_found'                  => __( 'Not Found', 'ukmtheme' ),
     );
     $rewrite = array(
-      'slug'                       => 'group',
+      'slug'                       => 'section',
       'with_front'                 => true,
       'hierarchical'               => false,
     );
@@ -58,17 +58,17 @@ add_action('restrict_manage_posts','restrict_listings_by_page');
     if ($typenow=='page') {
     $taxonomy = 'pagecat';
     $term = isset($wp_query->query['pagecat']) ? $wp_query->query['pagecat'] :'';
-    $Category_taxonomy = get_taxonomy($taxonomy);
+    $section_taxonomy = get_taxonomy($taxonomy);
       wp_dropdown_categories(array(
-        'show_option_all' =>  __( 'All Category', 'ukmtheme' ),
+        'show_option_all' =>  __( 'All Section', 'ukmtheme' ),
         'taxonomy'        =>  $taxonomy,
         'name'            =>  'pagecat',
         'orderby'         =>  'name',
         'selected'        =>  $term,
         'hierarchical'    =>  true,
         'depth'           =>  3,
-        'show_count'      =>  true, // Show # listings in parens
-        'hide_empty'      =>  true, // Don't show Categoryes w/o listings
+        'show_count'      =>  true,
+        'hide_empty'      =>  true,
       ));
     }
   }

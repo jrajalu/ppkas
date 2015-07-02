@@ -1,7 +1,7 @@
 /*
 Theme Name: PPKAS UniMAP
 Theme URI: https://github.com/jrajalu/ppkas
-Version: 0.1.5
+Version: 0.1.6
 Description: WordPress Theme for PPKAS UniMAP
 Author: Jamaludin Rajalu
 */
@@ -558,6 +558,9 @@ a img.aligncenter {
   z-index: 100000;
   /* Above WP toolbar. */
 }
+a:hover {
+  text-decoration: none;
+}
 .pad-right {
   padding-right: 20px;
 }
@@ -572,6 +575,11 @@ a img.aligncenter {
 }
 .pad-global {
   padding: 20px 20px 20px 20px;
+}
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .bottom-divider {
   border-bottom: 1px solid #ccc;

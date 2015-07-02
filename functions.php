@@ -176,7 +176,7 @@ add_action( 'after_setup_theme', 'ppkas_module' );
 add_filter( 'excerpt_more', 'ppkas_excerpt_more' );
   function ppkas_excerpt_more($more) {
     global $post;
-      return '<a class="readmore" href="'. get_permalink($post->ID) . '">'. __( ' ...', 'ppkas' ) . '</a>';
+      return '<a href="'. get_permalink($post->ID) . '">'. __( ' Read More...', 'ppkas' ) . '</a>';
   }
 
 add_filter( 'excerpt_length', 'ppkas_excerpt_length', 999 );
@@ -252,6 +252,17 @@ if (!function_exists('ppkas_widgets_init')) {
       'before_title'    => '<h3 class="uk-hidden">',
       'after_title'     => '</h3>',
     ) );
+    
+    register_sidebar( array(
+      'name'            => __( 'Frontpage: Three Column', 'ppkas' ),
+      'id'              => 'sidebar-3',
+      'description'     => __( 'Use only three widget item', 'ppkas' ),
+      'before_widget'   => '<div class="uk-width-medium-1-3" style="min-height: 100px;">',
+      'after_widget'    => '</div>',
+      'before_title'    => '<h3 class="widget-title">',
+      'after_title'     => '</h3>',
+    ) );
+    
   }
 }
 
