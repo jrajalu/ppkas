@@ -7,10 +7,28 @@
 ?>
 </div><!-- stickyfooter -->
 <div class="footer">
-  <div class="wrap">
-    <div class="uk-grid uk-grid-divider" data-uk-grid-match="">
-      <?php if (dynamic_sidebar( 'sidebar-5' )) : else : ?><?php endif; ?>
-    </div>  
+  <div class="wrap column">
+    <div class="col-5-12">
+      <h3><?php _e( 'School Links', 'ppkas' ); ?></h3>
+        <a href="" class="uk-icon-button uk-icon-facebook"></a>
+        <a href="" class="uk-icon-button uk-icon-yahoo"></a>
+        <a href="" class="uk-icon-button uk-icon-pagelines"></a>
+        <a href="" class="uk-icon-button uk-icon-group"></a>
+        <a href="" class="uk-icon-button uk-icon-globe"></a>
+      
+    </div>
+    <div class="col-7-12">
+      <h3><?php _e( 'External Links', 'ppkas' ); ?></h3>
+      <a href="" class="">
+        <img src="<?php echo get_template_directory_uri() . '/img/ppkas-logo-jata.png'; ?>" width="70" >
+        <img src="<?php echo get_template_directory_uri() . '/img/ppkas-logo-kpm.png'; ?>" width="70" >
+        <img src="<?php echo get_template_directory_uri() . '/img/ppkas-logo-ljm.png'; ?>" width="70" >
+        <img src="<?php echo get_template_directory_uri() . '/img/ppkas-logo-mosti.png'; ?>" width="70" >
+        <img src="<?php echo get_template_directory_uri() . '/img/ppkas-logo-msc.png'; ?>" width="70" >
+        <img src="<?php echo get_template_directory_uri() . '/img/ppkas-logo-ptptn.png'; ?>" width="70" >
+        
+      </a> 
+    </div>
   </div>
   <div class="footer-copyright">
     <div class="wrap column">

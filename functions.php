@@ -68,7 +68,7 @@ add_action( 'wp_enqueue_scripts', 'ppkas_scripts' );
 
 /**
  * Semakan versi theme terkini secara automatik
- * jangan tukar nama folder theme "ukmtheme-master"
+ * jangan tukar nama folder theme "ppkas-master"
  */
 
 require( 'inc/theme-update-checker.php' );
@@ -100,10 +100,10 @@ add_action( 'after_setup_theme', 'ppkas_setup' );
     remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
     remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
-    load_theme_textdomain( 'ukmtheme', get_template_directory() . '/lang' );
+    load_theme_textdomain( 'ppkas', get_template_directory() . '/lang' );
 
     register_nav_menus( array(
-      'main'      => __( 'Main Navigation', 'ukmtheme' ),
+      'main'      => __( 'Main Navigation', 'ppkas' ),
     ) );
 
     add_theme_support( 'custom-header', array(
@@ -176,7 +176,7 @@ add_action( 'after_setup_theme', 'ppkas_module' );
 add_filter( 'excerpt_more', 'ppkas_excerpt_more' );
   function ppkas_excerpt_more($more) {
     global $post;
-      return '<a class="readmore" href="'. get_permalink($post->ID) . '">'. __( ' ...', 'ukmtheme' ) . '</a>';
+      return '<a class="readmore" href="'. get_permalink($post->ID) . '">'. __( ' ...', 'ppkas' ) . '</a>';
   }
 
 add_filter( 'excerpt_length', 'ppkas_excerpt_length', 999 );
@@ -234,9 +234,9 @@ if (!function_exists('ppkas_widgets_init')) {
   function ppkas_widgets_init() {
 
     register_sidebar( array(
-      'name'            => __( 'Page Sidebar', 'ukmtheme' ),
+      'name'            => __( 'Page Sidebar', 'ppkas' ),
       'id'              => 'sidebar-1',
-      'description'     => __( 'Appears when using the optional page', 'ukmtheme' ),
+      'description'     => __( 'Appears when using the optional page', 'ppkas' ),
       'before_widget'   => '<aside class="widgets pad-bottom">',
       'after_widget'    => '</aside>',
       'before_title'    => '<h3 class="widget-title">',
@@ -244,9 +244,9 @@ if (!function_exists('ppkas_widgets_init')) {
     ) );
 
     register_sidebar( array(
-      'name'            => __( 'Frontpage: Small Banner', 'ukmtheme' ),
+      'name'            => __( 'Frontpage: Small Banner', 'ppkas' ),
       'id'              => 'sidebar-2',
-      'description'     => __( 'Use only four widget item', 'ukmtheme' ),
+      'description'     => __( 'Use only four widget item', 'ppkas' ),
       'before_widget'   => '<div class="col-3-12 pad-global">',
       'after_widget'    => '</div>',
       'before_title'    => '<h3 class="uk-hidden">',
@@ -262,7 +262,7 @@ if (!function_exists('ppkas_widgets_init')) {
 
 function ppkas_search_form( $form ) {
   $form = '<form role="search" method="get" class="uk-form" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-  <input type="search" class="search-field" placeholder="' . esc_attr__( 'Search...','ukmtheme' ) . '" value="' . get_search_query() . '" name="s" id="s" />
+  <input type="search" class="search-field" placeholder="' . esc_attr__( 'Search...','ppkas' ) . '" value="' . get_search_query() . '" name="s" id="s" />
   <button class="search-submit uk-button uk-button-primary" id="searchsubmit">'. esc_attr__( 'Search' ) .'</button>
   </form>';
 
