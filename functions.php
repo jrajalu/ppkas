@@ -254,8 +254,18 @@ if (!function_exists('ppkas_widgets_init')) {
     ) );
     
     register_sidebar( array(
-      'name'            => __( 'Frontpage: Three Column', 'ppkas' ),
+      'name'            => __( 'Frontpage: One Column', 'ppkas' ),
       'id'              => 'sidebar-3',
+      'description'     => __( 'Use only one widget item', 'ppkas' ),
+      'before_widget'   => '<div class="uk-width-medium-1-1" style="min-height: 100px;">',
+      'after_widget'    => '</div>',
+      'before_title'    => '<h3 class="widget-title">',
+      'after_title'     => '</h3>',
+    ) );
+    
+    register_sidebar( array(
+      'name'            => __( 'Frontpage: Three Column', 'ppkas' ),
+      'id'              => 'sidebar-4',
       'description'     => __( 'Use only three widget item', 'ppkas' ),
       'before_widget'   => '<div class="uk-width-medium-1-3" style="min-height: 100px;">',
       'after_widget'    => '</div>',
