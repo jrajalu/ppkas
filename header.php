@@ -27,6 +27,7 @@
       <div class="col-6-12">
         <div class="column">
           <h1 class="site-name"><?php echo bloginfo( 'name' ); ?></h1>
+          <p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
         </div>
       </div>
   </div>
