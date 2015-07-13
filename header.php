@@ -19,16 +19,10 @@
 <header class="header-wrap theme-color">
   <div class="header">
     <div class="wrap column">
-      <div class="col-6-12 sm-hidden">
+      <div class="col-12-12 sm-hidden">
         <a href="<?php echo bloginfo( 'url' ); ?>">
           <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
         </a>
-      </div>
-      <div class="col-6-12">
-        <div class="column">
-          <h1 class="site-name"><?php echo bloginfo( 'name' ); ?></h1>
-          <p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
-        </div>
       </div>
   </div>
 

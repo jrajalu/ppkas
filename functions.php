@@ -107,9 +107,9 @@ add_action( 'after_setup_theme', 'ppkas_setup' );
     ) );
 
     add_theme_support( 'custom-header', array(
-      'width'         => 399.953,
+      'width'         => 960,
       'height'        => 100,
-      'default-image' => get_template_directory_uri() . '/img/logo-unimap.png',
+      'default-image' => get_template_directory_uri() . '/img/logo.png',
       'uploads'       => true,
       'header-text'   => false,
       )
