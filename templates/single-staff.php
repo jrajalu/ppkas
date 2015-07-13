@@ -40,7 +40,7 @@ get_header(); ?>
       $cvDetails    = get_post_meta(get_the_ID(),'ppkas_staff_cv_details',true);
       $cvQualify    = get_post_meta(get_the_ID(),'ppkas_staff_cv_academic_qualifications',true);
       $cvProMember  = get_post_meta(get_the_ID(),'ppkas_staff_cv_current_professional_membership',true);
-      $cvTeachAdmin = get_post_meta(get_the_ID(),'ppkas_staff_cv_current_teaching_and_administrative_responsibilities',true);
+      $cvTeachAdmin = get_post_meta(get_the_ID(),'ppkas_staff_cv_ctaar',true);
       $cvPrevEmp    = get_post_meta(get_the_ID(),'ppkas_staff_cv_previous_employment',true);
       $cvConfTrain  = get_post_meta(get_the_ID(),'ppkas_staff_cv_conferences_and_training',true);
       $cvResPub     = get_post_meta(get_the_ID(),'ppkas_staff_cv_research_and_publications',true);

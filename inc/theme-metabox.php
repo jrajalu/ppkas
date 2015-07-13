@@ -243,7 +243,7 @@ add_action( 'cmb2_init', 'ppkas_staff_metaboxes' );
     $staff->add_field( array(
       'name'    => __( 'Current Teaching and Administrative Responsibilities', 'ppkas' ),
       'desc'    => __( 'Current Teaching and Administrative Responsibilities Details', 'ppkas' ),
-      'id'      => $prefix . 'staff_cv_current_teaching_and_administrative_responsibilities',
+      'id'      => $prefix . 'staff_cv_ctaar',
       'type'    => 'wysiwyg',
       'options' => array( 'textarea_rows' => 5, ),
     ) );
