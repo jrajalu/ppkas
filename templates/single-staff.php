@@ -107,7 +107,7 @@ get_header(); ?>
         <!-- consultancy -->
         <div class="column pad-top">
           <div class="col-3-12 pad-right">
-            Research and Publications:
+            Consultancy:
           </div>
           <div class="col-9-12">
             <?php echo $cvConsult; ?>
