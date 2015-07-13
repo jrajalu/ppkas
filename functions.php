@@ -33,7 +33,7 @@ add_action( 'admin_enqueue_scripts', 'ppkas_wp_admin_scripts' );
     // Stylesheet
     wp_enqueue_style( 'thickbox' );
     wp_enqueue_style( 'wp-color-picker' );
-    wp_enqueue_style( 'admin', get_template_directory_uri() . '/css/admin.min.css', false, '6.7' );
+    wp_enqueue_style( 'admin', get_template_directory_uri() . '/css/admin.css', false, '1.0' );
 
   }
 
