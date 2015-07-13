@@ -37,7 +37,6 @@ get_header(); ?>
       </div>
     </div>
     <?php
-      $cvLink       = get_post_meta(get_the_ID(),'ppkas_staff_cv_link',true);
       $cvDetails    = get_post_meta(get_the_ID(),'ppkas_staff_cv_details',true);
       $cvQualify    = get_post_meta(get_the_ID(),'ppkas_staff_cv_academic_qualifications',true);
       $cvProMember  = get_post_meta(get_the_ID(),'ppkas_staff_cv_current_professional_membership',true);
@@ -56,7 +55,7 @@ get_header(); ?>
             Academic Qualifications:
           </div>
           <div class="col-9-12">
-            <?php echo $cvQualify; ?>
+            <?php echo wpautop( $cvQualify ); ?>
           </div>
         </div>
         <!-- current_professional_membership -->
@@ -65,7 +64,7 @@ get_header(); ?>
             Current Professional Membership:
           </div>
           <div class="col-9-12">
-            <?php echo $cvProMember; ?>
+            <?php echo wpautop( $cvProMember ); ?>
           </div>
         </div>
         <!-- current_teaching_and_administrative_responsibilities -->
@@ -74,7 +73,7 @@ get_header(); ?>
             Current Teaching and Administrative Responsibilities:
           </div>
           <div class="col-9-12">
-            <?php echo $cvTeachAdmin; ?>
+            <?php echo wpautop( $cvTeachAdmin ); ?>
           </div>
         </div>
         <!-- previous_employment -->
@@ -83,7 +82,7 @@ get_header(); ?>
             Previous Employment:
           </div>
           <div class="col-9-12">
-            <?php echo $cvPrevEmp; ?>
+            <?php echo wpautop( $cvPrevEmp ); ?>
           </div>
         </div>
         <!-- conferences_and_training -->
@@ -92,7 +91,7 @@ get_header(); ?>
             Conferences and Training:
           </div>
           <div class="col-9-12">
-            <?php echo $cvConfTrain; ?>
+            <?php echo wpautop( $cvConfTrain ); ?>
           </div>
         </div>
         <!-- research_and_publications -->
@@ -101,7 +100,7 @@ get_header(); ?>
             Research and Publications:
           </div>
           <div class="col-9-12">
-            <?php echo $cvResPub; ?>
+            <?php echo wpautop( $cvResPub ); ?>
           </div>
         </div>
         <!-- consultancy -->
@@ -110,7 +109,7 @@ get_header(); ?>
             Consultancy:
           </div>
           <div class="col-9-12">
-            <?php echo $cvConsult; ?>
+            <?php echo wpautop( $cvConsult ); ?>
           </div>
         </div>
         <!-- community_service -->
@@ -119,7 +118,7 @@ get_header(); ?>
             Community Service:
           </div>
           <div class="col-9-12">
-            <?php echo $cvComm; ?>
+            <?php echo wpautop( $cvComm ); ?>
           </div>
         </div>
         <!-- other_relevant_information -->
@@ -128,7 +127,7 @@ get_header(); ?>
             Other Relevant Information:
           </div>
           <div class="col-9-12">
-            <?php echo $cvRelInfo; ?>
+            <?php echo wpautop( $cvRelInfo ); ?>
           </div>
         </div>
 
@@ -137,7 +136,7 @@ get_header(); ?>
         echo '';
       }
     ?>
-    <?php get_template_part('templates/content','edit' ); ?>
+    <?php get_template_part( 'templates/content','edit' ); ?>
     <?php endwhile; ?>
   </article>
   <aside class="aside col-4-12">
